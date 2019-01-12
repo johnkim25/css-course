@@ -9,9 +9,16 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+
+    display: flex;
+    //for main axis
+    justify-content: space-between;
+    //cross axis
+    align-items: center;
 }
 
 .content {
