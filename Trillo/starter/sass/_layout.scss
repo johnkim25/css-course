@@ -31,12 +31,19 @@
     //grow, shrink, basis
     //basis is the width
     flex: 0  0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
-    background-color: orangered;
-
+    
     //element should grow as much as it can
     flex: 1;
+    
+    //testing purposes
+    height: 80rem;
+    background-color: orangered;
 }
