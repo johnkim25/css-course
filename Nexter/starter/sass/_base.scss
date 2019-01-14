@@ -35,3 +35,25 @@ body {
     font-weight: 300;
     line-height: 1.6;
 }
+
+
+.container {
+    display: grid;
+    //80vh for header,
+    //mincontent for features,
+    //40vw for story,
+    //rest of the elements are min-content
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+    //minmax(min-content, 14rem)
+    //we want the content to take up 140px but adapt to mincontent
+    //1fr each for full bleed sections, aka margins
+    // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+
+    & > * {
+        //development purposes
+        padding: 40px;
+        font-size: 3rem;
+    }
+}
